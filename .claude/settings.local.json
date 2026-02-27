@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo $ANTHROPIC_API_KEY)",
+      "Bash(npm run build)",
+      "Bash(npm run dev)"
+    ]
+  }
+}

@@ -1,0 +1,1041 @@
+{
+  "schemes": [
+    {
+      "id": "pm-kisan",
+      "name": "PM-KISAN",
+      "fullName": "Pradhan Mantri Kisan Samman Nidhi",
+      "category": "agriculture",
+      "ministry": "Ministry of Agriculture & Farmers Welfare",
+      "benefit": {
+        "amount": 6000,
+        "currency": "INR",
+        "type": "cash",
+        "frequency": "yearly",
+        "description": "₹6,000 per year paid in 3 installments of ₹2,000 directly to bank account"
+      },
+      "eligibility": {
+        "occupation": ["farmer", "agriculturist"],
+        "land": "small/marginal (up to 2 hectares)",
+        "income": null,
+        "age": { "min": 18 },
+        "notes": "Land must be in farmer's name. Excludes government employees, income taxpayers."
+      },
+      "documents": ["Aadhaar card", "Land records / Khatoni / Jamabandi", "Bank passbook with IFSC", "Mobile number linked to Aadhaar"],
+      "howToApply": "Visit local Patwari/Revenue Officer or village Common Service Centre (CSC) or apply online",
+      "website": "https://pmkisan.gov.in",
+      "tags": ["farmer", "agriculture", "cash transfer", "rural", "BPL", "land owner"],
+      "translations": {
+        "hi": {
+          "name": "पीएम-किसान",
+          "description": "छोटे और सीमांत किसानों को ₹6,000 प्रति वर्ष की वित्तीय सहायता",
+          "eligibility": "2 हेक्टेयर तक की भूमि वाले किसान",
+          "howToApply": "स्थानीय पटवारी के पास जाएं या pmkisan.gov.in पर ऑनलाइन आवेदन करें"
+        },
+        "kn": {
+          "name": "ಪಿಎಂ-ಕಿಸಾನ್",
+          "description": "ಸಣ್ಣ ಮತ್ತು ಅತಿ ಸಣ್ಣ ರೈತರಿಗೆ ವರ್ಷಕ್ಕೆ ₹6,000 ಹಣಕಾಸು ನೆರವು",
+          "eligibility": "2 ಹೆಕ್ಟೇರ್ ವರೆಗೆ ಭೂಮಿ ಹೊಂದಿರುವ ರೈತರು",
+          "howToApply": "ಸ್ಥಳೀಯ ಪಹಣಿ ಕಚೇರಿ ಅಥವಾ CSC ಕೇಂದ್ರ"
+        },
+        "ta": {
+          "name": "பிஎம்-கிசான்",
+          "description": "சிறு மற்றும் குறு விவசாயிகளுக்கு ஆண்டுக்கு ₹6,000 நிதி உதவி",
+          "eligibility": "2 ஹெக்டேர் வரை நிலம் உள்ள விவசாயிகள்",
+          "howToApply": "உள்ளூர் வருவாய் அலுவலகம் அல்லது CSC மையம்"
+        },
+        "te": {
+          "name": "పీఎం-కిసాన్",
+          "description": "చిన్న మరియు సీమాంత రైతులకు సంవత్సరానికి ₹6,000 ఆర్థిక సహాయం",
+          "eligibility": "2 హెక్టార్ల వరకు భూమి ఉన్న రైతులు",
+          "howToApply": "స్థానిక పహని కార్యాలయం లేదా CSC కేంద్రం"
+        }
+      }
+    },
+    {
+      "id": "ayushman-bharat",
+      "name": "Ayushman Bharat - PMJAY",
+      "fullName": "Pradhan Mantri Jan Arogya Yojana",
+      "category": "health",
+      "ministry": "Ministry of Health & Family Welfare",
+      "benefit": {
+        "amount": 500000,
+        "currency": "INR",
+        "type": "insurance",
+        "frequency": "yearly",
+        "description": "Health insurance coverage of ₹5 lakh per year per family for hospitalisation"
+      },
+      "eligibility": {
+        "income": "BPL / economically weaker sections",
+        "occupation": ["all"],
+        "notes": "Based on SECC 2011 data. Covers poor and vulnerable families. No premium for beneficiaries."
+      },
+      "documents": ["Aadhaar card", "Ration card", "SECC verification", "Family composition proof"],
+      "howToApply": "Visit nearest Ayushman Bharat Empanelled Hospital or Arogya Mitra at hospital",
+      "website": "https://pmjay.gov.in",
+      "tags": ["health", "insurance", "hospital", "BPL", "poor", "family", "medical"],
+      "translations": {
+        "hi": {
+          "name": "आयुष्मान भारत",
+          "description": "₹5 लाख तक का मुफ्त अस्पताल उपचार",
+          "eligibility": "BPL परिवार और आर्थिक रूप से कमजोर वर्ग",
+          "howToApply": "नजदीकी सूचीबद्ध अस्पताल में आरोग्य मित्र से संपर्क करें"
+        },
+        "kn": {
+          "name": "ಆಯುಷ್ಮಾನ್ ಭಾರತ",
+          "description": "₹5 ಲಕ್ಷ ವರೆಗೆ ಉಚಿತ ಆಸ್ಪತ್ರೆ ಚಿಕಿತ್ಸೆ",
+          "eligibility": "BPL ಕುಟುಂಬಗಳು",
+          "howToApply": "ಹತ್ತಿರದ ಸೂಚಿಸಲಾದ ಆಸ್ಪತ್ರೆಗೆ ಭೇಟಿ ನೀಡಿ"
+        },
+        "ta": {
+          "name": "ஆயுஷ்மான் பாரத்",
+          "description": "₹5 லட்சம் வரை இலவச மருத்துவமனை சிகிச்சை",
+          "eligibility": "BPL குடும்பங்கள்",
+          "howToApply": "அருகிலுள்ள பட்டியலிடப்பட்ட மருத்துவமனைக்கு செல்லவும்"
+        },
+        "te": {
+          "name": "ఆయుష్మాన్ భారత్",
+          "description": "₹5 లక్షల వరకు ఉచిత ఆసుపత్రి చికిత్స",
+          "eligibility": "BPL కుటుంబాలు",
+          "howToApply": "సమీపంలోని జాబితా చేయబడిన ఆసుపత్రికి వెళ్ళండి"
+        }
+      }
+    },
+    {
+      "id": "pmay-gramin",
+      "name": "PMAY-G",
+      "fullName": "Pradhan Mantri Awas Yojana - Gramin",
+      "category": "housing",
+      "ministry": "Ministry of Rural Development",
+      "benefit": {
+        "amount": 120000,
+        "currency": "INR",
+        "type": "subsidy",
+        "frequency": "one-time",
+        "description": "₹1.20 lakh in plains (₹1.30 lakh in hilly/NE states) for house construction"
+      },
+      "eligibility": {
+        "residence": "rural",
+        "housing": "homeless or katcha house",
+        "income": "BPL / SECC listed",
+        "occupation": ["all"],
+        "notes": "Priority to SC/ST, minorities, disabled, women-headed households"
+      },
+      "documents": ["Aadhaar card", "Job card / BPL card", "Bank account details", "Land certificate", "Caste certificate if applicable"],
+      "howToApply": "Apply through Gram Panchayat or nearest Block Development Office",
+      "website": "https://pmayg.nic.in",
+      "tags": ["housing", "home", "rural", "BPL", "construction", "SC", "ST", "women"],
+      "translations": {
+        "hi": {
+          "name": "पीएमएवाई-ग्रामीण",
+          "description": "ग्रामीण क्षेत्रों में कच्चे मकान वालों को पक्का मकान बनाने के लिए ₹1.20 लाख",
+          "eligibility": "कच्चे या बिना घर के ग्रामीण परिवार",
+          "howToApply": "ग्राम पंचायत या प्रखंड विकास कार्यालय में संपर्क करें"
+        },
+        "kn": {
+          "name": "ಪಿಎಂಎವೈ-ಗ್ರಾಮೀಣ",
+          "description": "ಗ್ರಾಮೀಣ ಪ್ರದೇಶದ ನಿರಾಶ್ರಿತರಿಗೆ ಮನೆ ನಿರ್ಮಾಣಕ್ಕೆ ₹1.20 ಲಕ್ಷ",
+          "eligibility": "ಕಚ್ಚಾ ಮನೆ ಅಥವಾ ನಿರಾಶ್ರಿತ ಗ್ರಾಮೀಣ ಕುಟುಂಬಗಳು",
+          "howToApply": "ಗ್ರಾಮ ಪಂಚಾಯಿತಿ ಅಥವಾ ಬ್ಲಾಕ್ ಅಭಿವೃದ್ಧಿ ಕಚೇರಿ"
+        },
+        "ta": {
+          "name": "பிஎம்ஏவை-கிராம",
+          "description": "கிராமப்புற வீடற்ற குடும்பங்களுக்கு வீடு கட்ட ₹1.20 லட்சம்",
+          "eligibility": "கச்சா வீடு அல்லது வீடற்ற கிராமப்புற குடும்பங்கள்",
+          "howToApply": "கிராம பஞ்சாயத்து அல்லது தொகுதி வளர்ச்சி அலுவலகம்"
+        },
+        "te": {
+          "name": "పీఎంఏవై-గ్రామీణ",
+          "description": "గ్రామీణ ప్రాంత నిరాశ్రయులకు ఇల్లు నిర్మించడానికి ₹1.20 లక్షలు",
+          "eligibility": "కచ్చా ఇల్లు లేదా నిరాశ్రయ గ్రామీణ కుటుంబాలు",
+          "howToApply": "గ్రామ పంచాయతీ లేదా బ్లాక్ డెవలప్మెంట్ ఆఫీస్"
+        }
+      }
+    },
+    {
+      "id": "pmuy",
+      "name": "Ujjwala Yojana",
+      "fullName": "Pradhan Mantri Ujjwala Yojana",
+      "category": "energy",
+      "ministry": "Ministry of Petroleum and Natural Gas",
+      "benefit": {
+        "amount": 1600,
+        "currency": "INR",
+        "type": "subsidy",
+        "frequency": "one-time",
+        "description": "Free LPG connection with ₹1,600 financial assistance for deposit, stove and first refill"
+      },
+      "eligibility": {
+        "gender": "female",
+        "income": "BPL / poor families",
+        "age": { "min": 18 },
+        "notes": "Beneficiary must be adult woman. Family should not already have LPG connection."
+      },
+      "documents": ["Aadhaar card", "BPL ration card / SECC data", "Bank account", "Address proof"],
+      "howToApply": "Visit nearest LPG distributor with documents",
+      "website": "https://www.pmuy.gov.in",
+      "tags": ["women", "cooking", "LPG", "gas", "BPL", "rural", "kitchen"],
+      "translations": {
+        "hi": {
+          "name": "उज्ज्वला योजना",
+          "description": "BPL महिलाओं को मुफ्त LPG गैस कनेक्शन",
+          "eligibility": "BPL परिवार की 18 वर्ष से अधिक महिला",
+          "howToApply": "नजदीकी LPG वितरक के पास दस्तावेजों के साथ जाएं"
+        },
+        "kn": {
+          "name": "ಉಜ್ವಲ ಯೋಜನೆ",
+          "description": "BPL ಮಹಿಳೆಯರಿಗೆ ಉಚಿತ LPG ಸಂಪರ್ಕ",
+          "eligibility": "BPL ಕುಟುಂಬದ 18 ವರ್ಷ ಮೇಲಿನ ಮಹಿಳೆ",
+          "howToApply": "ಹತ್ತಿರದ LPG ವಿತರಕರ ಬಳಿ ದಾಖಲೆಗಳೊಂದಿಗೆ ಭೇಟಿ ನೀಡಿ"
+        },
+        "ta": {
+          "name": "உஜ்வல திட்டம்",
+          "description": "BPL பெண்களுக்கு இலவச LPG இணைப்பு",
+          "eligibility": "BPL குடும்பத்தில் 18 வயதுக்கு மேற்பட்ட பெண்கள்",
+          "howToApply": "அருகிலுள்ள LPG விநியோகஸ்தரிடம் ஆவணங்களுடன் செல்லவும்"
+        },
+        "te": {
+          "name": "ఉజ్జ్వల పథకం",
+          "description": "BPL మహిళలకు ఉచిత LPG కనెక్షన్",
+          "eligibility": "BPL కుటుంబంలో 18 సంవత్సరాలు పైబడిన మహిళలు",
+          "howToApply": "సమీపంలోని LPG డిస్ట్రిబ్యూటర్ వద్ద పత్రాలతో వెళ్ళండి"
+        }
+      }
+    },
+    {
+      "id": "mgnrega",
+      "name": "MGNREGA",
+      "fullName": "Mahatma Gandhi National Rural Employment Guarantee Act",
+      "category": "employment",
+      "ministry": "Ministry of Rural Development",
+      "benefit": {
+        "amount": 267,
+        "currency": "INR",
+        "type": "wage",
+        "frequency": "daily",
+        "description": "Guaranteed 100 days of employment per year at minimum ₹267/day wage (varies by state)"
+      },
+      "eligibility": {
+        "residence": "rural",
+        "age": { "min": 18 },
+        "occupation": ["unskilled manual worker"],
+        "notes": "Any rural adult willing to do unskilled manual work. Job card required."
+      },
+      "documents": ["Aadhaar card", "Job card (obtained from Gram Panchayat)", "Bank account"],
+      "howToApply": "Apply for Job Card at Gram Panchayat. Then apply for work when needed.",
+      "website": "https://nrega.nic.in",
+      "tags": ["employment", "rural", "labour", "job", "wages", "guarantee"],
+      "translations": {
+        "hi": {
+          "name": "मनरेगा",
+          "description": "ग्रामीण परिवारों को 100 दिन का गारंटीड रोजगार",
+          "eligibility": "ग्रामीण क्षेत्र के 18 वर्ष से अधिक वयस्क",
+          "howToApply": "ग्राम पंचायत से जॉब कार्ड बनवाएं"
+        },
+        "kn": {
+          "name": "ಮನರೇಗ",
+          "description": "ಗ್ರಾಮೀಣ ಕುಟುಂಬಗಳಿಗೆ 100 ದಿನಗಳ ಖಾತರಿ ಉದ್ಯೋಗ",
+          "eligibility": "18 ವರ್ಷ ಮೇಲಿನ ಗ್ರಾಮೀಣ ವಯಸ್ಕರು",
+          "howToApply": "ಗ್ರಾಮ ಪಂಚಾಯಿತಿಯಲ್ಲಿ ಜಾಬ್ ಕಾರ್ಡ್ ಮಾಡಿಸಿ"
+        },
+        "ta": {
+          "name": "மக்னரேகா",
+          "description": "கிராமப்புற குடும்பங்களுக்கு 100 நாட்கள் உத்தரவாத வேலைவாய்ப்பு",
+          "eligibility": "18 வயதுக்கு மேற்பட்ட கிராமப்புற வயதுவந்தோர்",
+          "howToApply": "கிராம பஞ்சாயத்தில் ஜாப் கார்டு பெறவும்"
+        },
+        "te": {
+          "name": "మహాత్మా గాంధీ నరేగా",
+          "description": "గ్రామీణ కుటుంబాలకు సంవత్సరానికి 100 రోజుల ఉపాధి హామీ",
+          "eligibility": "18 సంవత్సరాలు పైబడిన గ్రామీణ వయోజనులు",
+          "howToApply": "గ్రామ పంచాయతీలో జాబ్ కార్డ్ పొందండి"
+        }
+      }
+    },
+    {
+      "id": "pm-mudra",
+      "name": "PM Mudra Yojana",
+      "fullName": "Pradhan Mantri MUDRA Yojana",
+      "category": "business",
+      "ministry": "Ministry of Finance",
+      "benefit": {
+        "amount": 1000000,
+        "currency": "INR",
+        "type": "loan",
+        "frequency": "one-time",
+        "description": "Collateral-free loans: Shishu (up to ₹50,000), Kishore (₹50,000-5 lakh), Tarun (₹5-10 lakh)"
+      },
+      "eligibility": {
+        "occupation": ["self-employed", "micro-entrepreneur", "small business"],
+        "age": { "min": 18 },
+        "notes": "Non-corporate, non-farm small businesses. Good credit history needed."
+      },
+      "documents": ["Aadhaar card", "PAN card", "Business address proof", "Business plan", "Bank statement"],
+      "howToApply": "Apply at any bank, MFI, NBFC or through mudra.org.in",
+      "website": "https://www.mudra.org.in",
+      "tags": ["business", "loan", "entrepreneur", "self-employed", "small business", "startup"],
+      "translations": {
+        "hi": {
+          "name": "पीएम मुद्रा योजना",
+          "description": "छोटे व्यापारियों को बिना गारंटी के ₹10 लाख तक का लोन",
+          "eligibility": "18 वर्ष से अधिक स्व-रोजगार या छोटे व्यापारी",
+          "howToApply": "किसी भी बैंक में या mudra.org.in पर आवेदन करें"
+        },
+        "kn": {
+          "name": "ಪಿಎಂ ಮುದ್ರಾ ಯೋಜನೆ",
+          "description": "ಸಣ್ಣ ವ್ಯಾಪಾರಿಗಳಿಗೆ ₹10 ಲಕ್ಷದ ವರೆಗೆ ಸಾಲ",
+          "eligibility": "18 ವರ್ಷ ಮೇಲಿನ ಸ್ವ-ಉದ್ಯೋಗಿ ಅಥವಾ ಸಣ್ಣ ವ್ಯಾಪಾರಿ",
+          "howToApply": "ಯಾವುದೇ ಬ್ಯಾಂಕ್‌ನಲ್ಲಿ ಅಥವಾ mudra.org.in ನಲ್ಲಿ ಅರ್ಜಿ"
+        },
+        "ta": {
+          "name": "பிஎம் முத்ரா திட்டம்",
+          "description": "சிறு தொழிலாளர்களுக்கு ₹10 லட்சம் வரை கடன்",
+          "eligibility": "18 வயதுக்கு மேற்பட்ட சுய தொழில் அல்லது சிறு வணிகர்கள்",
+          "howToApply": "எந்த வங்கியிலும் அல்லது mudra.org.in இல் விண்ணப்பிக்கவும்"
+        },
+        "te": {
+          "name": "పీఎం ముద్రా పథకం",
+          "description": "చిన్న వ్యాపారులకు ₹10 లక్షల వరకు రుణం",
+          "eligibility": "18 సంవత్సరాలు పైబడిన స్వయం ఉపాధి లేదా చిన్న వ్యాపారులు",
+          "howToApply": "ఏదైనా బ్యాంక్‌లో లేదా mudra.org.in లో దరఖాస్తు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "pmsby",
+      "name": "PMSBY",
+      "fullName": "Pradhan Mantri Suraksha Bima Yojana",
+      "category": "insurance",
+      "ministry": "Ministry of Finance",
+      "benefit": {
+        "amount": 200000,
+        "currency": "INR",
+        "type": "insurance",
+        "frequency": "yearly",
+        "description": "Accidental death/disability insurance of ₹2 lakh at just ₹20 per year premium"
+      },
+      "eligibility": {
+        "age": { "min": 18, "max": 70 },
+        "income": "all",
+        "notes": "Must have savings bank account. Auto-debit consent required."
+      },
+      "documents": ["Aadhaar card", "Bank account with savings"],
+      "howToApply": "Enroll through your bank or via banking app",
+      "website": "https://jansuraksha.gov.in",
+      "tags": ["insurance", "accident", "death", "disability", "all", "bank account"],
+      "translations": {
+        "hi": {
+          "name": "पीएम सुरक्षा बीमा योजना",
+          "description": "मात्र ₹20 प्रति वर्ष में ₹2 लाख का दुर्घटना बीमा",
+          "eligibility": "18-70 वर्ष के बचत खाताधारक",
+          "howToApply": "अपने बैंक में या बैंकिंग ऐप के माध्यम से नामांकन करें"
+        },
+        "kn": {
+          "name": "ಪಿಎಂಎಸ್‌ಬಿವೈ",
+          "description": "ಕೇವಲ ₹20 ವಾರ್ಷಿಕ ಪ್ರೀಮಿಯಂನಲ್ಲಿ ₹2 ಲಕ್ಷ ಅಪಘಾತ ವಿಮೆ",
+          "eligibility": "18-70 ವರ್ಷ ವಯೋಮಾನದ ಉಳಿತಾಯ ಖಾತೆದಾರರು",
+          "howToApply": "ನಿಮ್ಮ ಬ್ಯಾಂಕ್ ಮೂಲಕ ನೋಂದಣಿ ಮಾಡಿ"
+        },
+        "ta": {
+          "name": "பிஎம் சுரக்ஷா பீமா",
+          "description": "வெறும் ₹20/ஆண்டுக்கு ₹2 லட்சம் விபத்து காப்பீடு",
+          "eligibility": "18-70 வயது சேமிப்பு கணக்கு வைத்திருப்பவர்கள்",
+          "howToApply": "உங்கள் வங்கியில் பதிவு செய்யவும்"
+        },
+        "te": {
+          "name": "పీఎం సురక్షా బీమా",
+          "description": "కేవలం ₹20/సంవత్సరానికి ₹2 లక్షల ప్రమాద బీమా",
+          "eligibility": "18-70 సంవత్సరాల పొదుపు ఖాతా ధారులు",
+          "howToApply": "మీ బ్యాంక్ ద్వారా నమోదు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "pmjjby",
+      "name": "PMJJBY",
+      "fullName": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+      "category": "insurance",
+      "ministry": "Ministry of Finance",
+      "benefit": {
+        "amount": 200000,
+        "currency": "INR",
+        "type": "insurance",
+        "frequency": "yearly",
+        "description": "Life insurance cover of ₹2 lakh at ₹436 per year premium"
+      },
+      "eligibility": {
+        "age": { "min": 18, "max": 50 },
+        "income": "all",
+        "notes": "Must have savings bank account with auto-debit."
+      },
+      "documents": ["Aadhaar card", "Bank savings account"],
+      "howToApply": "Enroll through your bank",
+      "website": "https://jansuraksha.gov.in",
+      "tags": ["insurance", "life", "death", "family", "bank account", "all"],
+      "translations": {
+        "hi": {
+          "name": "पीएम जीवन ज्योति बीमा",
+          "description": "₹436 प्रति वर्ष में ₹2 लाख का जीवन बीमा",
+          "eligibility": "18-50 वर्ष के बचत खाताधारक",
+          "howToApply": "अपने बैंक के माध्यम से नामांकन करें"
+        },
+        "kn": {
+          "name": "ಪಿಎಂ ಜೀವನ ಜ್ಯೋತಿ ಬೀಮಾ",
+          "description": "₹436 ವಾರ್ಷಿಕ ಪ್ರೀಮಿಯಂನಲ್ಲಿ ₹2 ಲಕ್ಷ ಜೀವ ವಿಮೆ",
+          "eligibility": "18-50 ವರ್ಷ ವಯೋಮಾನದ ಉಳಿತಾಯ ಖಾತೆದಾರರು",
+          "howToApply": "ನಿಮ್ಮ ಬ್ಯಾಂಕ್ ಮೂಲಕ ನೋಂದಣಿ ಮಾಡಿ"
+        },
+        "ta": {
+          "name": "பிஎம் ஜீவன் ஜோதி பீமா",
+          "description": "₹436/ஆண்டுக்கு ₹2 லட்சம் உயிர் காப்பீடு",
+          "eligibility": "18-50 வயது சேமிப்பு கணக்கு வைத்திருப்பவர்கள்",
+          "howToApply": "உங்கள் வங்கியில் பதிவு செய்யவும்"
+        },
+        "te": {
+          "name": "పీఎం జీవన్ జ్యోతి బీమా",
+          "description": "₹436/సంవత్సరానికి ₹2 లక్షల జీవిత బీమా",
+          "eligibility": "18-50 సంవత్సరాల పొదుపు ఖాతా ధారులు",
+          "howToApply": "మీ బ్యాంక్ ద్వారా నమోదు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "pmmvy",
+      "name": "PMMVY",
+      "fullName": "Pradhan Mantri Matru Vandana Yojana",
+      "category": "women_child",
+      "ministry": "Ministry of Women and Child Development",
+      "benefit": {
+        "amount": 5000,
+        "currency": "INR",
+        "type": "cash",
+        "frequency": "one-time",
+        "description": "₹5,000 maternity benefit in 3 installments for first live birth"
+      },
+      "eligibility": {
+        "gender": "female",
+        "age": { "min": 19 },
+        "occupation": ["all"],
+        "notes": "For first live birth. Pregnant and lactating women. Not applicable for govt. employees."
+      },
+      "documents": ["Aadhaar card", "MCP card (Mother Child Protection Card)", "Bank account", "Husband Aadhaar"],
+      "howToApply": "Register at Anganwadi Centre with MCP Card within 150 days of pregnancy",
+      "website": "https://wcd.nic.in/pmmvy",
+      "tags": ["women", "pregnant", "maternity", "child", "mother", "birth", "pregnancy"],
+      "translations": {
+        "hi": {
+          "name": "प्रधानमंत्री मातृ वंदना योजना",
+          "description": "पहले जीवित बच्चे के जन्म पर गर्भवती महिलाओं को ₹5,000",
+          "eligibility": "पहले जीवित बच्चे की गर्भवती और स्तनपान कराने वाली 19 वर्ष+ महिलाएं",
+          "howToApply": "गर्भावस्था के 150 दिन के भीतर आंगनबाड़ी केंद्र में पंजीकरण कराएं"
+        },
+        "kn": {
+          "name": "ಪಿಎಂಎಂವಿವೈ",
+          "description": "ಮೊದಲ ಜೀವಂತ ಮಗುವಿನ ಜನನದ ಸಮಯದಲ್ಲಿ ₹5,000 ಮಾತೃ ಸಹಾಯ",
+          "eligibility": "19 ವರ್ಷ ಮೇಲಿನ ಗರ್ಭಿಣಿ ಮಹಿಳೆಯರು",
+          "howToApply": "ಅಂಗನವಾಡಿ ಕೇಂದ್ರದಲ್ಲಿ ನೋಂದಣಿ ಮಾಡಿ"
+        },
+        "ta": {
+          "name": "பிஎம் மாத்ரு வந்தனா",
+          "description": "முதல் குழந்தை பிறப்பில் கர்ப்பிணி பெண்களுக்கு ₹5,000",
+          "eligibility": "19 வயதுக்கு மேற்பட்ட கர்ப்பிணி பெண்கள்",
+          "howToApply": "அங்கன்வாடி மையத்தில் பதிவு செய்யவும்"
+        },
+        "te": {
+          "name": "పిఎం మాత్రు వందన పథకం",
+          "description": "మొదటి జీవిత జననంలో గర్భిణీ స్త్రీలకు ₹5,000",
+          "eligibility": "19 సంవత్సరాలు పైబడిన గర్భిణీ స్త్రీలు",
+          "howToApply": "అంగన్‌వాడీ కేంద్రంలో నమోదు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "ignoaps",
+      "name": "IGNOAPS",
+      "fullName": "Indira Gandhi National Old Age Pension Scheme",
+      "category": "pension",
+      "ministry": "Ministry of Rural Development",
+      "benefit": {
+        "amount": 600,
+        "currency": "INR",
+        "type": "pension",
+        "frequency": "monthly",
+        "description": "Monthly pension of ₹200 (Centre) + state top-up. Total varies ₹500-₹2000+ by state"
+      },
+      "eligibility": {
+        "age": { "min": 60 },
+        "income": "BPL",
+        "occupation": ["all"],
+        "notes": "Must be BPL. Age 60+. For 80+ years, ₹500/month central assistance."
+      },
+      "documents": ["Aadhaar card", "Age proof", "BPL ration card", "Bank account"],
+      "howToApply": "Apply at Gram Panchayat or Block Development Office",
+      "website": "https://nsap.nic.in",
+      "tags": ["old age", "senior citizen", "pension", "elderly", "BPL", "60 years"],
+      "translations": {
+        "hi": {
+          "name": "इंदिरा गांधी वृद्धावस्था पेंशन",
+          "description": "60 वर्ष से अधिक BPL बुजुर्गों को मासिक पेंशन",
+          "eligibility": "60 वर्ष से अधिक BPL वर्ग के बुजुर्ग",
+          "howToApply": "ग्राम पंचायत या प्रखंड विकास कार्यालय में आवेदन करें"
+        },
+        "kn": {
+          "name": "ಇಂದಿರಾ ಗಾಂಧಿ ವೃದ್ಧಾಪ್ಯ ಪಿಂಚಣಿ",
+          "description": "60 ವರ್ಷ ಮೇಲಿನ BPL ವೃದ್ಧರಿಗೆ ಮಾಸಿಕ ಪಿಂಚಣಿ",
+          "eligibility": "60 ವರ್ಷ ಮೇಲಿನ BPL ವೃದ್ಧರು",
+          "howToApply": "ಗ್ರಾಮ ಪಂಚಾಯಿತಿ ಅಥವಾ ಬ್ಲಾಕ್ ಕಚೇರಿಯಲ್ಲಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ"
+        },
+        "ta": {
+          "name": "முதியோர் ஓய்வூதியம் (IGNOAPS)",
+          "description": "60 வயதுக்கு மேற்பட்ட BPL முதியோருக்கு மாதாந்திர ஓய்வூதியம்",
+          "eligibility": "60 வயதுக்கு மேற்பட்ட BPL முதியோர்",
+          "howToApply": "கிராம பஞ்சாயத்து அல்லது தொகுதி அலுவலகத்தில் விண்ணப்பிக்கவும்"
+        },
+        "te": {
+          "name": "వృద్ధాప్య పెన్షన్ (IGNOAPS)",
+          "description": "60 సంవత్సరాలు పైబడిన BPL వృద்ధులకు నెలవారీ పెన్షన్",
+          "eligibility": "60 సంవత్సరాలు పైబడిన BPL వర్గం",
+          "howToApply": "గ్రామ పంచాయతీ లేదా బ్లాక్ ఆఫీస్‌లో దరఖాస్తు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "ignwps",
+      "name": "IGNWPS - Widow Pension",
+      "fullName": "Indira Gandhi National Widow Pension Scheme",
+      "category": "pension",
+      "ministry": "Ministry of Rural Development",
+      "benefit": {
+        "amount": 800,
+        "currency": "INR",
+        "type": "pension",
+        "frequency": "monthly",
+        "description": "Monthly pension for widows. Central contribution ₹300 + state top-up"
+      },
+      "eligibility": {
+        "gender": "female",
+        "marital_status": "widow",
+        "age": { "min": 40, "max": 79 },
+        "income": "BPL",
+        "notes": "Widows aged 40-79 from BPL families. After 80, shifted to old age pension."
+      },
+      "documents": ["Aadhaar card", "Husband's death certificate", "Age proof", "BPL ration card", "Bank account"],
+      "howToApply": "Apply at Gram Panchayat or Block Development Office",
+      "website": "https://nsap.nic.in",
+      "tags": ["widow", "women", "pension", "BPL", "husband died", "single woman"],
+      "translations": {
+        "hi": {
+          "name": "विधवा पेंशन योजना",
+          "description": "BPL विधवा महिलाओं को मासिक पेंशन",
+          "eligibility": "40-79 वर्ष की BPL विधवा महिलाएं",
+          "howToApply": "ग्राम पंचायत में आवेदन करें, पति का मृत्यु प्रमाण पत्र लाएं"
+        },
+        "kn": {
+          "name": "ವಿಧವೆ ಪಿಂಚಣಿ ಯೋಜನೆ",
+          "description": "BPL ವಿಧವೆ ಮಹಿಳೆಯರಿಗೆ ಮಾಸಿಕ ಪಿಂಚಣಿ",
+          "eligibility": "40-79 ವರ್ಷ ವಯೋಮಾನದ BPL ವಿಧವೆಯರು",
+          "howToApply": "ಗ್ರಾಮ ಪಂಚಾಯಿತಿಯಲ್ಲಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ"
+        },
+        "ta": {
+          "name": "விதவை ஓய்வூதியம்",
+          "description": "BPL விதவை பெண்களுக்கு மாதாந்திர ஓய்வூதியம்",
+          "eligibility": "40-79 வயது BPL விதவைகள்",
+          "howToApply": "கிராம பஞ்சாயத்தில் விண்ணப்பிக்கவும்"
+        },
+        "te": {
+          "name": "వితంతు పెన్షన్ పథకం",
+          "description": "BPL వితంతు మహిళలకు నెలవారీ పెన్షన్",
+          "eligibility": "40-79 సంవత్సరాల BPL వితంతువులు",
+          "howToApply": "గ్రామ పంచాయతీలో దరఖాస్తు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "igndps",
+      "name": "IGNDPS - Disability Pension",
+      "fullName": "Indira Gandhi National Disability Pension Scheme",
+      "category": "pension",
+      "ministry": "Ministry of Rural Development",
+      "benefit": {
+        "amount": 600,
+        "currency": "INR",
+        "type": "pension",
+        "frequency": "monthly",
+        "description": "Monthly pension for persons with severe disabilities. ₹300 Centre + state top-up"
+      },
+      "eligibility": {
+        "disability": true,
+        "disability_percent": 80,
+        "age": { "min": 18, "max": 79 },
+        "income": "BPL",
+        "notes": "80%+ disability. BPL families."
+      },
+      "documents": ["Aadhaar card", "Disability certificate (80%+ from govt doctor)", "BPL card", "Bank account"],
+      "howToApply": "Apply at Gram Panchayat with disability certificate",
+      "website": "https://nsap.nic.in",
+      "tags": ["disability", "disabled", "handicapped", "pension", "BPL"],
+      "translations": {
+        "hi": {
+          "name": "दिव्यांग पेंशन योजना",
+          "description": "80% से अधिक विकलांगता वाले BPL व्यक्तियों को मासिक पेंशन",
+          "eligibility": "18-79 वर्ष, 80%+ विकलांगता, BPL",
+          "howToApply": "विकलांगता प्रमाण पत्र के साथ ग्राम पंचायत में आवेदन करें"
+        },
+        "kn": {
+          "name": "ಅಂಗವಿಕಲ ಪಿಂಚಣಿ",
+          "description": "80%+ ಅಂಗವಿಕಲತೆ ಇರುವ BPL ವ್ಯಕ್ತಿಗಳಿಗೆ ಮಾಸಿಕ ಪಿಂಚಣಿ",
+          "eligibility": "18-79 ವರ್ಷ, 80%+ ಅಂಗವಿಕಲತೆ, BPL",
+          "howToApply": "ಅಂಗವಿಕಲ ಪ್ರಮಾಣಪತ್ರದೊಂದಿಗೆ ಗ್ರಾಮ ಪಂಚಾಯಿತಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ"
+        },
+        "ta": {
+          "name": "மாற்றுத்திறனாளி ஓய்வூதியம்",
+          "description": "80%+ மாற்றுத்திறன் உள்ள BPL நபர்களுக்கு மாதாந்திர ஓய்வூதியம்",
+          "eligibility": "18-79 வயது, 80%+ மாற்றுத்திறன், BPL",
+          "howToApply": "மாற்றுத்திறன் சான்றிதழுடன் கிராம பஞ்சாயத்தில் விண்ணப்பிக்கவும்"
+        },
+        "te": {
+          "name": "వికలాంగ పెన్షన్",
+          "description": "80%+ వికలాంగత ఉన్న BPL వ్యక్తులకు నెలవారీ పెన్షన్",
+          "eligibility": "18-79 సంవత్సరాలు, 80%+ వికలాంగత, BPL",
+          "howToApply": "వికలాంగ సర్టిఫికెట్‌తో గ్రామ పంచాయతీలో దరఖాస్తు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "sukanya-samriddhi",
+      "name": "Sukanya Samriddhi Yojana",
+      "fullName": "Sukanya Samriddhi Yojana",
+      "category": "savings",
+      "ministry": "Ministry of Finance",
+      "benefit": {
+        "amount": null,
+        "currency": "INR",
+        "type": "savings",
+        "frequency": "yearly",
+        "description": "High-interest (8.2% p.a.) savings account for girl child. Tax-free maturity amount."
+      },
+      "eligibility": {
+        "gender": "female",
+        "age": { "max": 10 },
+        "notes": "For girl child below 10 years. Max 2 accounts per family. Min ₹250/year deposit."
+      },
+      "documents": ["Birth certificate of girl child", "Parent's Aadhaar", "Address proof"],
+      "howToApply": "Open account at Post Office or authorized bank with ₹250 minimum",
+      "website": "https://www.indiapost.gov.in",
+      "tags": ["girl child", "daughter", "savings", "education", "marriage", "future"],
+      "translations": {
+        "hi": {
+          "name": "सुकन्या समृद्धि योजना",
+          "description": "बेटियों के लिए उच्च ब्याज वाला बचत खाता (8.2% ब्याज दर)",
+          "eligibility": "10 वर्ष से कम आयु की बेटियों के लिए",
+          "howToApply": "पोस्ट ऑफिस या बैंक में न्यूनतम ₹250 के साथ खाता खोलें"
+        },
+        "kn": {
+          "name": "ಸುಕನ್ಯಾ ಸಮೃದ್ಧಿ ಯೋಜನೆ",
+          "description": "ಹೆಣ್ಣು ಮಕ್ಕಳಿಗಾಗಿ ಹೆಚ್ಚಿನ ಬಡ್ಡಿ ದರದ ಉಳಿತಾಯ ಖಾತೆ",
+          "eligibility": "10 ವರ್ಷ ಕೆಳಗಿನ ಹೆಣ್ಣು ಮಕ್ಕಳಿಗೆ",
+          "howToApply": "ಅಂಚೆ ಕಚೇರಿ ಅಥವಾ ಬ್ಯಾಂಕ್‌ನಲ್ಲಿ ₹250 ಕನಿಷ್ಠ ಠೇವಣಿಯೊಂದಿಗೆ ಖಾತೆ ತೆರೆಯಿರಿ"
+        },
+        "ta": {
+          "name": "சுகன்யா சம்ருத்தி திட்டம்",
+          "description": "பெண் குழந்தைகளுக்கு அதிக வட்டி சேமிப்பு கணக்கு",
+          "eligibility": "10 வயதுக்கு கீழ் உள்ள பெண் குழந்தைகளுக்கு",
+          "howToApply": "தபால் அலுவலகம் அல்லது வங்கியில் குறைந்தபட்சம் ₹250 டெபாசிட்டுடன் கணக்கு திறக்கவும்"
+        },
+        "te": {
+          "name": "సుకన్య సమృద్ధి పథకం",
+          "description": "బాలికలకు అధిక వడ్డీ రేటు పొదుపు ఖాతా",
+          "eligibility": "10 సంవత్సరాల కంటే తక్కువ వయసు బాలికలకు",
+          "howToApply": "పోస్ట్ ఆఫీస్ లేదా బ్యాంక్‌లో కనీసం ₹250 డిపాజిట్‌తో ఖాతా తెరవండి"
+        }
+      }
+    },
+    {
+      "id": "pm-fasal-bima",
+      "name": "Pradhan Mantri Fasal Bima Yojana",
+      "fullName": "Pradhan Mantri Fasal Bima Yojana",
+      "category": "agriculture",
+      "ministry": "Ministry of Agriculture",
+      "benefit": {
+        "amount": null,
+        "currency": "INR",
+        "type": "insurance",
+        "frequency": "seasonal",
+        "description": "Crop insurance: 2% premium for Kharif, 1.5% for Rabi. Government pays rest. Full sum insured on crop damage."
+      },
+      "eligibility": {
+        "occupation": ["farmer"],
+        "notes": "All farmers growing notified crops. Compulsory for loanee farmers, optional for others."
+      },
+      "documents": ["Aadhaar", "Bank passbook", "Land records", "Sowing certificate"],
+      "howToApply": "Apply through bank/CSC before cutoff date for each season",
+      "website": "https://pmfby.gov.in",
+      "tags": ["farmer", "crop", "insurance", "flood", "drought", "agriculture", "kharif", "rabi"],
+      "translations": {
+        "hi": {
+          "name": "पीएम फसल बीमा योजना",
+          "description": "बाढ़, सूखा, आंधी से फसल खराब होने पर बीमा मुआवजा",
+          "eligibility": "सभी किसान जो अधिसूचित फसलें उगाते हैं",
+          "howToApply": "प्रत्येक मौसम की कटऑफ तारीख से पहले बैंक या CSC में आवेदन करें"
+        },
+        "kn": {
+          "name": "ಪಿಎಂ ಫಸಲ್ ಬೀಮಾ",
+          "description": "ಪ್ರವಾಹ, ಬರ, ಗಾಳಿಯಿಂದ ಬೆಳೆ ನಷ್ಟಕ್ಕೆ ವಿಮಾ ಪರಿಹಾರ",
+          "eligibility": "ಅಧಿಸೂಚಿತ ಬೆಳೆ ಬೆಳೆಯುವ ಎಲ್ಲಾ ರೈತರು",
+          "howToApply": "ಪ್ರತಿ ಋತುವಿನ ಗಡುವಿನ ಮೊದಲು ಬ್ಯಾಂಕ್ ಅಥವಾ CSC ನಲ್ಲಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ"
+        },
+        "ta": {
+          "name": "பிஎம் பயிர் காப்பீடு",
+          "description": "வெள்ளம், வறட்சி, புயலால் பயிர் சேதத்திற்கு காப்பீடு",
+          "eligibility": "அறிவிக்கப்பட்ட பயிர்கள் வளர்க்கும் அனைத்து விவசாயிகளும்",
+          "howToApply": "ஒவ்வொரு பருவத்தின் இறுதி தேதிக்கு முன் வங்கி அல்லது CSC இல் விண்ணப்பிக்கவும்"
+        },
+        "te": {
+          "name": "పీఎం పంట బీమా పథకం",
+          "description": "వరదలు, కరువు, తుఫాను వల్ల పంట నష్టానికి బీమా",
+          "eligibility": "నోటిఫైడ్ పంటలు పండించే అన్ని రైతులు",
+          "howToApply": "ప్రతి సీజన్ కటాఫ్ తేదీకి ముందు బ్యాంక్ లేదా CSC లో దరఖాస్తు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "nsp-scholarship",
+      "name": "NSP Scholarship",
+      "fullName": "National Scholarship Portal - Pre/Post Matric Scholarships",
+      "category": "education",
+      "ministry": "Ministry of Minority Affairs / Social Justice",
+      "benefit": {
+        "amount": 25000,
+        "currency": "INR",
+        "type": "scholarship",
+        "frequency": "yearly",
+        "description": "Scholarships ranging ₹1,000-₹25,000/year for SC/ST/OBC/Minority students"
+      },
+      "eligibility": {
+        "occupation": ["student"],
+        "social": ["SC", "ST", "OBC", "Minority", "EWS"],
+        "income": "family income under ₹2.5 lakh/year",
+        "notes": "Based on marks and family income. Pre-matric (class 1-10), Post-matric (class 11-PhD)."
+      },
+      "documents": ["Aadhaar card", "Bank account", "Mark sheets", "Income certificate", "Caste/community certificate"],
+      "howToApply": "Apply online at scholarships.gov.in before deadline (usually Oct-Nov)",
+      "website": "https://scholarships.gov.in",
+      "tags": ["student", "education", "scholarship", "SC", "ST", "OBC", "minority", "school", "college"],
+      "translations": {
+        "hi": {
+          "name": "राष्ट्रीय छात्रवृत्ति पोर्टल",
+          "description": "SC/ST/OBC/अल्पसंख्यक छात्रों के लिए छात्रवृत्ति",
+          "eligibility": "SC/ST/OBC/अल्पसंख्यक छात्र, परिवार की आय ₹2.5 लाख से कम",
+          "howToApply": "scholarships.gov.in पर ऑनलाइन आवेदन करें"
+        },
+        "kn": {
+          "name": "ರಾಷ್ಟ್ರೀಯ ವಿದ್ಯಾರ್ಥಿವೇತನ ಪೋರ್ಟಲ್",
+          "description": "SC/ST/OBC/ಅಲ್ಪಸಂಖ್ಯಾತ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವಿದ್ಯಾರ್ಥಿವೇತನ",
+          "eligibility": "SC/ST/OBC/ಅಲ್ಪಸಂಖ್ಯಾತ ವಿದ್ಯಾರ್ಥಿಗಳು, ಕುಟುಂಬದ ಆದಾಯ ₹2.5 ಲಕ್ಷ ಕಡಿಮೆ",
+          "howToApply": "scholarships.gov.in ನಲ್ಲಿ ಆನ್‌ಲೈನ್ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ"
+        },
+        "ta": {
+          "name": "தேசிய உதவித்தொகை போர்டல்",
+          "description": "SC/ST/OBC/சிறுபான்மை மாணவர்களுக்கு உதவித்தொகை",
+          "eligibility": "SC/ST/OBC/சிறுபான்மை மாணவர்கள், குடும்ப வருமானம் ₹2.5 லட்சத்திற்கு கீழ்",
+          "howToApply": "scholarships.gov.in இல் ஆன்லைன் விண்ணப்பிக்கவும்"
+        },
+        "te": {
+          "name": "జాతీయ స్కాలర్‌షిప్ పోర్టల్",
+          "description": "SC/ST/OBC/మైనారిటీ విద్యార్థులకు స్కాలర్‌షిప్",
+          "eligibility": "SC/ST/OBC/మైనారిటీ విద్యార్థులు, కుటుంబ ఆదాయం ₹2.5 లక్షల కంటే తక్కువ",
+          "howToApply": "scholarships.gov.in లో ఆన్‌లైన్ దరఖాస్తు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "pm-jan-dhan",
+      "name": "PM Jan Dhan Yojana",
+      "fullName": "Pradhan Mantri Jan Dhan Yojana",
+      "category": "banking",
+      "ministry": "Ministry of Finance",
+      "benefit": {
+        "amount": 10000,
+        "currency": "INR",
+        "type": "banking",
+        "frequency": "one-time",
+        "description": "Zero-balance bank account with ₹2 lakh accident insurance and ₹10,000 overdraft facility"
+      },
+      "eligibility": {
+        "age": { "min": 10 },
+        "notes": "Any Indian citizen who doesn't have a bank account. Zero minimum balance required."
+      },
+      "documents": ["Aadhaar card or any identity proof", "Address proof"],
+      "howToApply": "Visit any bank branch with Aadhaar card",
+      "website": "https://pmjdy.gov.in",
+      "tags": ["bank account", "banking", "zero balance", "unbanked", "DBT", "all"],
+      "translations": {
+        "hi": {
+          "name": "प्रधानमंत्री जन धन योजना",
+          "description": "शून्य बैलेंस बैंक खाता, ₹2 लाख दुर्घटना बीमा सहित",
+          "eligibility": "कोई भी भारतीय नागरिक जिसका बैंक खाता नहीं है",
+          "howToApply": "आधार कार्ड के साथ किसी भी बैंक शाखा में जाएं"
+        },
+        "kn": {
+          "name": "ಪಿಎಂ ಜನ್ ಧನ್ ಯೋಜನೆ",
+          "description": "ಶೂನ್ಯ ಬ್ಯಾಲೆನ್ಸ್ ಬ್ಯಾಂಕ್ ಖಾತೆ, ₹2 ಲಕ್ಷ ಅಪಘಾತ ವಿಮೆ ಸಹಿತ",
+          "eligibility": "ಬ್ಯಾಂಕ್ ಖಾತೆ ಇಲ್ಲದ ಯಾವುದೇ ಭಾರತೀಯ ನಾಗರಿಕ",
+          "howToApply": "ಆಧಾರ್ ಕಾರ್ಡ್‌ನೊಂದಿಗೆ ಯಾವುದೇ ಬ್ಯಾಂಕ್ ಶಾಖೆಗೆ ಹೋಗಿ"
+        },
+        "ta": {
+          "name": "பிஎம் ஜன் தன் திட்டம்",
+          "description": "ஜீரோ பேலன்ஸ் வங்கி கணக்கு, ₹2 லட்சம் விபத்து காப்பீட்டுடன்",
+          "eligibility": "வங்கி கணக்கு இல்லாத எந்த இந்திய குடிமகனும்",
+          "howToApply": "ஆதார் கார்டுடன் எந்த வங்கி கிளையிலும் செல்லவும்"
+        },
+        "te": {
+          "name": "పీఎం జన్ ధన్ పథకం",
+          "description": "జీరో బ్యాలెన్స్ బ్యాంక్ ఖాతా, ₹2 లక్షల ప్రమాద బీమాతో",
+          "eligibility": "బ్యాంక్ ఖాతా లేని ఏ భారత పౌరుడైనా",
+          "howToApply": "ఆధార్ కార్డ్‌తో ఏ బ్యాంక్ శాఖలోనైనా వెళ్ళండి"
+        }
+      }
+    },
+    {
+      "id": "kisan-credit-card",
+      "name": "Kisan Credit Card",
+      "fullName": "Kisan Credit Card Scheme",
+      "category": "agriculture",
+      "ministry": "Ministry of Agriculture",
+      "benefit": {
+        "amount": 300000,
+        "currency": "INR",
+        "type": "credit",
+        "frequency": "yearly",
+        "description": "Flexible credit up to ₹3 lakh at 4% interest rate for farming needs"
+      },
+      "eligibility": {
+        "occupation": ["farmer"],
+        "notes": "Farmers, fishermen and animal husbandry workers. Land must be cultivated."
+      },
+      "documents": ["Aadhaar card", "Land records", "Bank account", "Passport photo"],
+      "howToApply": "Apply at nearest bank with land documents",
+      "website": "https://agricoop.nic.in",
+      "tags": ["farmer", "credit", "loan", "agriculture", "seeds", "fertiliser", "kisan"],
+      "translations": {
+        "hi": {
+          "name": "किसान क्रेडिट कार्ड",
+          "description": "किसानों को मात्र 4% ब्याज पर ₹3 लाख तक का कृषि ऋण",
+          "eligibility": "खेती करने वाले सभी किसान",
+          "howToApply": "भूमि दस्तावेजों के साथ नजदीकी बैंक में आवेदन करें"
+        },
+        "kn": {
+          "name": "ಕಿಸಾನ್ ಕ್ರೆಡಿಟ್ ಕಾರ್ಡ್",
+          "description": "ರೈತರಿಗೆ ಕೇವಲ 4% ಬಡ್ಡಿ ದರದಲ್ಲಿ ₹3 ಲಕ್ಷ ವರೆಗೆ ಕೃಷಿ ಸಾಲ",
+          "eligibility": "ಕೃಷಿ ಮಾಡುವ ಎಲ್ಲಾ ರೈತರು",
+          "howToApply": "ಭೂಮಿ ದಾಖಲೆಗಳೊಂದಿಗೆ ಹತ್ತಿರದ ಬ್ಯಾಂಕ್‌ಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ"
+        },
+        "ta": {
+          "name": "கிசான் கிரெடிட் கார்டு",
+          "description": "விவசாயிகளுக்கு 4% வட்டியில் ₹3 லட்சம் வரை விவசாய கடன்",
+          "eligibility": "விவசாயம் செய்யும் அனைத்து விவசாயிகளும்",
+          "howToApply": "நில ஆவணங்களுடன் அருகிலுள்ள வங்கியில் விண்ணப்பிக்கவும்"
+        },
+        "te": {
+          "name": "కిసాన్ క్రెడిట్ కార్డ్",
+          "description": "రైతులకు 4% వడ్డీ రేటుకు ₹3 లక్షల వ్యవసాయ రుణం",
+          "eligibility": "వ్యవసాయం చేసే అన్ని రైతులు",
+          "howToApply": "భూమి పత్రాలతో సమీపంలోని బ్యాంక్‌కు దరఖాస్తు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "pm-svnidhi",
+      "name": "PM SVANidhi",
+      "fullName": "PM Street Vendor's AtmaNirbhar Nidhi",
+      "category": "business",
+      "ministry": "Ministry of Housing and Urban Affairs",
+      "benefit": {
+        "amount": 50000,
+        "currency": "INR",
+        "type": "loan",
+        "frequency": "progressive",
+        "description": "Working capital loans: ₹10,000 (1st), ₹20,000 (2nd), ₹50,000 (3rd) at subsidized rates"
+      },
+      "eligibility": {
+        "occupation": ["street vendor", "hawker", "vendor"],
+        "residence": "urban",
+        "notes": "Street vendors with Certificate of Vending or Letter of Recommendation from ULB."
+      },
+      "documents": ["Aadhaar card", "Certificate of Vending or ULB Letter", "Bank account", "Vendor ID"],
+      "howToApply": "Apply on pmsvanidhi.mohua.gov.in or through any MFI/Bank",
+      "website": "https://pmsvanidhi.mohua.gov.in",
+      "tags": ["street vendor", "hawker", "urban", "small business", "loan", "thela", "rehri"],
+      "translations": {
+        "hi": {
+          "name": "पीएम स्वनिधि",
+          "description": "रेहड़ी-पटरी वालों को बिना गारंटी के ₹50,000 तक का कार्यशील पूंजी ऋण",
+          "eligibility": "शहरी क्षेत्र में रेहड़ी-पटरी लगाने वाले विक्रेता",
+          "howToApply": "pmsvanidhi.mohua.gov.in पर ऑनलाइन आवेदन करें"
+        },
+        "kn": {
+          "name": "ಪಿಎಂ ಸ್ವಾನಿಧಿ",
+          "description": "ಬೀದಿ ವ್ಯಾಪಾರಿಗಳಿಗೆ ₹50,000 ವರೆಗೆ ಸಾಲ",
+          "eligibility": "ನಗರ ಪ್ರದೇಶದ ಬೀದಿ ವ್ಯಾಪಾರಿಗಳು",
+          "howToApply": "pmsvanidhi.mohua.gov.in ನಲ್ಲಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ"
+        },
+        "ta": {
+          "name": "பிஎம் ஸ்வானிதி",
+          "description": "தெரு வணிகர்களுக்கு ₹50,000 வரை கடன்",
+          "eligibility": "நகர்ப்புற தெரு வணிகர்கள்",
+          "howToApply": "pmsvanidhi.mohua.gov.in இல் விண்ணப்பிக்கவும்"
+        },
+        "te": {
+          "name": "పీఎం స్వనిధి",
+          "description": "వీధి వ్యాపారులకు ₹50,000 వరకు రుణం",
+          "eligibility": "పట్టణ ప్రాంత వీధి వ్యాపారులు",
+          "howToApply": "pmsvanidhi.mohua.gov.in లో దరఖాస్తు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "atal-pension",
+      "name": "Atal Pension Yojana",
+      "fullName": "Atal Pension Yojana",
+      "category": "pension",
+      "ministry": "Ministry of Finance",
+      "benefit": {
+        "amount": 5000,
+        "currency": "INR",
+        "type": "pension",
+        "frequency": "monthly",
+        "description": "Guaranteed pension of ₹1,000-₹5,000/month after age 60, based on contribution"
+      },
+      "eligibility": {
+        "age": { "min": 18, "max": 40 },
+        "income": "unorganised sector",
+        "notes": "For workers in unorganised sector. Not for income tax payers or those with EPFO/ESIC."
+      },
+      "documents": ["Aadhaar card", "Bank savings account", "Mobile number"],
+      "howToApply": "Enroll through your bank savings account",
+      "website": "https://npscra.nsdl.co.in",
+      "tags": ["pension", "retirement", "unorganised sector", "self-employed", "future"],
+      "translations": {
+        "hi": {
+          "name": "अटल पेंशन योजना",
+          "description": "60 वर्ष के बाद ₹1,000-₹5,000 मासिक गारंटीड पेंशन",
+          "eligibility": "18-40 वर्ष के असंगठित क्षेत्र के कर्मचारी",
+          "howToApply": "अपने बचत खाते के बैंक के माध्यम से नामांकन करें"
+        },
+        "kn": {
+          "name": "ಅಟಲ್ ಪಿಂಚಣಿ ಯೋಜನೆ",
+          "description": "60 ವರ್ಷದ ನಂತರ ₹1,000-₹5,000 ಮಾಸಿಕ ಖಾತರಿ ಪಿಂಚಣಿ",
+          "eligibility": "18-40 ವರ್ಷ ಅಸಂಘಟಿತ ವಲಯದ ಕಾರ್ಮಿಕರು",
+          "howToApply": "ನಿಮ್ಮ ಉಳಿತಾಯ ಖಾತೆ ಬ್ಯಾಂಕ್ ಮೂಲಕ ನೋಂದಣಿ ಮಾಡಿ"
+        },
+        "ta": {
+          "name": "அடல் ஓய்வூதியம்",
+          "description": "60 வயதுக்கு பிறகு ₹1,000-₹5,000 மாதாந்திர உத்தரவாத ஓய்வூதியம்",
+          "eligibility": "18-40 வயது சீர்திருத்தப்படாத துறை தொழிலாளர்கள்",
+          "howToApply": "உங்கள் சேமிப்பு கணக்கு வங்கி மூலம் பதிவு செய்யவும்"
+        },
+        "te": {
+          "name": "అటల్ పెన్షన్ పథకం",
+          "description": "60 సంవత్సరాల తర్వాత ₹1,000-₹5,000 నెలవారీ హామీ పెన్షన్",
+          "eligibility": "18-40 సంవత్సరాల అసంఘటిత రంగ కార్మికులు",
+          "howToApply": "మీ పొదుపు ఖాతా బ్యాంక్ ద్వారా నమోదు చేయండి"
+        }
+      }
+    },
+    {
+      "id": "pmgkay",
+      "name": "PM Garib Kalyan Anna Yojana",
+      "fullName": "Pradhan Mantri Garib Kalyan Anna Yojana",
+      "category": "food",
+      "ministry": "Ministry of Consumer Affairs",
+      "benefit": {
+        "amount": null,
+        "currency": "INR",
+        "type": "food",
+        "frequency": "monthly",
+        "description": "5 kg free food grains (rice/wheat) per person per month under NFSA"
+      },
+      "eligibility": {
+        "income": "NFSA eligible families",
+        "notes": "Must have ration card. Priority and Antyodaya households under NFSA 2013."
+      },
+      "documents": ["Aadhaar card", "Ration card"],
+      "howToApply": "Use ration card at Fair Price Shop (FPS). For new ration card, apply at local food office.",
+      "website": "https://nfsa.gov.in",
+      "tags": ["ration", "food", "rice", "wheat", "free", "BPL", "AAY", "grain"],
+      "translations": {
+        "hi": {
+          "name": "पीएम गरीब कल्याण अन्न योजना",
+          "description": "NFSA परिवारों को प्रति व्यक्ति 5 किलो मुफ्त अनाज प्रति माह",
+          "eligibility": "राशन कार्डधारी NFSA परिवार",
+          "howToApply": "राशन की दुकान (FPS) पर आधार से राशन लें"
+        },
+        "kn": {
+          "name": "ಪಿಎಂ ಗ್ರೀಬ್ ಕಲ್ಯಾಣ ಅನ್ನ ಯೋಜನೆ",
+          "description": "NFSA ಕುಟುಂಬಗಳಿಗೆ ತಲಾ 5 ಕೆಜಿ ಉಚಿತ ಧಾನ್ಯ ಮಾಸಿಕ",
+          "eligibility": "ರೇಷನ್ ಕಾರ್ಡ್ ಹೊಂದಿರುವ NFSA ಕುಟುಂಬಗಳು",
+          "howToApply": "ರೇಷನ್ ಅಂಗಡಿಯಲ್ಲಿ ಆಧಾರ್‌ನಿಂದ ರೇಷನ್ ಪಡೆಯಿರಿ"
+        },
+        "ta": {
+          "name": "பிஎம் கரீப் கல்யாண் அன்ன திட்டம்",
+          "description": "NFSA குடும்பங்களுக்கு மாதம் தலைக்கு 5 கிலோ இலவச உணவு தானியம்",
+          "eligibility": "ரேஷன் கார்டு உள்ள NFSA குடும்பங்கள்",
+          "howToApply": "ரேஷன் கடையில் ஆதாரை பயன்படுத்தி ரேஷன் பெறவும்"
+        },
+        "te": {
+          "name": "పీఎం గరీబ్ కల్యాణ్ అన్న పథకం",
+          "description": "NFSA కుటుంబాలకు నెలకు తలసరి 5 కిలోల ఉచిత ఆహార ధాన్యాలు",
+          "eligibility": "రేషన్ కార్డు ఉన్న NFSA కుటుంబాలు",
+          "howToApply": "రేషన్ దుకాణంలో ఆధార్‌తో రేషన్ పొందండి"
+        }
+      }
+    },
+    {
+      "id": "bbbp",
+      "name": "Beti Bachao Beti Padhao",
+      "fullName": "Beti Bachao Beti Padhao Scheme",
+      "category": "women_child",
+      "ministry": "Ministry of Women & Child Development",
+      "benefit": {
+        "amount": null,
+        "currency": "INR",
+        "type": "education",
+        "frequency": "ongoing",
+        "description": "Education and welfare benefits for girl children including scholarships, free education and health services"
+      },
+      "eligibility": {
+        "gender": "female",
+        "notes": "Girl child beneficiaries. Focus districts across India."
+      },
+      "documents": ["Birth certificate", "Parent Aadhaar"],
+      "howToApply": "Through Anganwadi Centers, schools and district health offices",
+      "website": "https://wcd.nic.in/bbbp",
+      "tags": ["girl child", "daughter", "education", "women", "school", "healthcare"],
+      "translations": {
+        "hi": {
+          "name": "बेटी बचाओ बेटी पढ़ाओ",
+          "description": "बेटियों की शिक्षा और स्वास्थ्य के लिए विशेष लाभ",
+          "eligibility": "बालिका लाभार्थी",
+          "howToApply": "आंगनबाड़ी, स्कूल या जिला स्वास्थ्य कार्यालय के माध्यम से"
+        },
+        "kn": {
+          "name": "ಬೇಟಿ ಬಚಾವೋ ಬೇಟಿ ಪಢಾವೋ",
+          "description": "ಹೆಣ್ಣು ಮಕ್ಕಳ ಶಿಕ್ಷಣ ಮತ್ತು ಆರೋಗ್ಯಕ್ಕಾಗಿ ವಿಶೇಷ ಸೌಲಭ್ಯಗಳು",
+          "eligibility": "ಬಾಲಕಿ ಫಲಾನುಭವಿಗಳು",
+          "howToApply": "ಅಂಗನವಾಡಿ, ಶಾಲೆ ಅಥವಾ ಜಿಲ್ಲಾ ಆರೋಗ್ಯ ಕಚೇರಿ ಮೂಲಕ"
+        },
+        "ta": {
+          "name": "பெண் குழந்தை கல்வி திட்டம்",
+          "description": "பெண் குழந்தைகளின் கல்வி மற்றும் சுகாதாரத்திற்கு சிறப்பு சலுகைகள்",
+          "eligibility": "பெண் குழந்தை பயனாளிகள்",
+          "howToApply": "அங்கன்வாடி, பள்ளி அல்லது மாவட்ட சுகாதார அலுவலகம் மூலம்"
+        },
+        "te": {
+          "name": "బేటీ బచావో బేటీ పఢావో",
+          "description": "బాలికల విద్య మరియు ఆరోగ్యానికి ప్రత్యేక ప్రయోజనాలు",
+          "eligibility": "బాలిక లబ్ధిదారులు",
+          "howToApply": "అంగన్‌వాడీ, పాఠశాల లేదా జిల్లా ఆరోగ్య కార్యాలయం ద్వారా"
+        }
+      }
+    }
+  ]
+}
