@@ -1,74 +1,19 @@
-import Anthropic from '@anthropic-ai/sdk';
+import AnthropicBedrock from '@anthropic-ai/bedrock-sdk';
 import { getSchemeSummaryForAI } from '../../../lib/schemes';
 
-// --------------- DEMO MODE (no API key needed) ---------------
-function getDemoResponse(userText, language) {
-  const t = userText.toLowerCase();
-
-  const isFarmer = /farmer|kisan|किसान|ರೈತ|விவசாய|రైతు/.test(t);
-  const isWidow = /widow|विधवा|ವಿಧವೆ|விதவை|వితంతు/.test(t);
-  const isBPL = /bpl|ration|राशन|ration card|poor|garib|गरीब/.test(t);
-  const isPregnant = /pregnant|गर्भव|ಗರ್ಭಿಣಿ|கர்ப்பிணி|గర్భిణీ|maternity/.test(t);
-  const isStudent = /student|पढ़|school|college|scholarship/.test(t);
-  const isOld = /old|बुजुर्ग|pension|60|65|70|elderly/.test(t);
-  const isVendor = /vendor|hawker|street|thela|रेहड़ी/.test(t);
-  const hasGirlChild = /daughter|बेटी|girl child|sukanya/.test(t);
-
-  const responses = {
-    hi: {
-      farmer: {
-        message: `नमस्ते! आपकी जानकारी के आधार पर, आप इन 3 योजनाओं के लिए पात्र हो सकते हैं:\n\n1. **पीएम-किसान** — ₹6,000/साल सीधे बैंक में (3 किश्तों में)\n2. **पीएम फसल बीमा** — बाढ़/सूखे में फसल नुकसान पर मुआवजा\n3. **किसान क्रेडिट कार्ड** — मात्र 4% ब्याज पर ₹3 लाख तक कृषि ऋण\n\nआधार कार्ड और जमीन के कागज लेकर अपने नजदीकी बैंक या CSC केंद्र में जाएं। क्या आप किसी एक योजना के बारे में विस्तार से जानना चाहते हैं?`,
-        schemes: ['pm-kisan', 'pm-fasal-bima', 'kisan-credit-card'],
-      },
-      widow: {
-        message: `मैं आपकी कठिन परिस्थिति समझता हूँ। आपके लिए ये योजनाएँ उपलब्ध हैं:\n\n1. **विधवा पेंशन (IGNWPS)** — हर महीने ₹500-800 पेंशन\n2. **आयुष्मान भारत** — ₹5 लाख तक का मुफ्त इलाज\n3. **पीएम आवास योजना** — पक्का मकान बनाने के लिए ₹1.20 लाख\n\nग्राम पंचायत में जाकर विधवा प्रमाण पत्र के साथ आवेदन करें। हिम्मत रखें, आपके हक की मदद सरकार करेगी! 💪`,
-        schemes: ['ignwps', 'ayushman-bharat', 'pmay-gramin'],
-      },
-      generic: {
-        message: `नमस्ते! मैं योजना-सेतु हूँ। मुझे थोड़ी जानकारी दें:\n\n• आप किस राज्य से हैं?\n• क्या काम करते हैं (किसान/मजदूर/व्यापारी)?\n• BPL/राशन कार्ड है?\n• परिवार में कितने सदस्य हैं?\n\nआपकी जानकारी के आधार पर मैं आपके लिए सबसे फायदेमंद सरकारी योजनाएँ खोजूँगा! 🎯`,
-        schemes: [],
-      },
-    },
-    en: {
-      farmer: {
-        message: `Hello! Based on what you've told me, you may be eligible for:\n\n1. **PM-KISAN** — ₹6,000/year directly to your bank account\n2. **PM Fasal Bima** — Crop insurance against floods and drought\n3. **Kisan Credit Card** — Agriculture loans at just 4% interest rate\n\nVisit your nearest bank or CSC centre with your Aadhaar card and land documents. Would you like details on how to apply for any of these?`,
-        schemes: ['pm-kisan', 'pm-fasal-bima', 'kisan-credit-card'],
-      },
-      widow: {
-        message: `I understand your situation. Here are schemes available for you:\n\n1. **Widow Pension (IGNWPS)** — Monthly pension of ₹500-800\n2. **Ayushman Bharat** — Free hospital treatment up to ₹5 lakh\n3. **PMAY-Gramin** — ₹1.20 lakh to build a pucca house\n\nVisit your Gram Panchayat with your husband's death certificate to apply. You have every right to these benefits! 💪`,
-        schemes: ['ignwps', 'ayushman-bharat', 'pmay-gramin'],
-      },
-      generic: {
-        message: `Hello! I'm Yojna-Setu. To find the best government schemes for you, please tell me:\n\n• Which state are you from?\n• What is your occupation (farmer, laborer, vendor)?\n• Do you have a BPL/ration card?\n• How many family members do you have?\n\nI'll match you to the most beneficial welfare schemes! 🎯`,
-        schemes: [],
-      },
-    },
-  };
-
-  const langResponses = responses[language] || responses.en;
-  let picked;
-
-  if (isFarmer) picked = langResponses.farmer;
-  else if (isWidow) picked = langResponses.widow;
-  else picked = langResponses.generic;
-
-  return {
-    message: picked.message,
-    detected_language: language,
-    matched_scheme_ids: picked.schemes,
-    extracted_profile: { is_farmer: isFarmer, is_widow: isWidow, is_bpl: isBPL },
-    follow_up_needed: picked.schemes.length === 0,
-    follow_up_question: null,
-    demo_mode: true,
-  };
-}
-// ---------------------------------------------------------------
+// Claude model on AWS Bedrock — billed to your AWS credits
+// claude-3-5-haiku is fast + cheap; switch to claude-3-5-sonnet for higher quality
+const BEDROCK_MODEL = 'anthropic.claude-3-5-haiku-20241022-v1:0';
 
 const getClient = () => {
-  if (!process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY === 'YOUR_API_KEY_HERE') {
+  if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY) {
     return null;
   }
-  return new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  return new AnthropicBedrock({
+    awsAccessKey: process.env.AWS_ACCESS_KEY_ID,
+    awsSecretKey: process.env.AWS_SECRET_ACCESS_KEY,
+    awsRegion: process.env.AWS_REGION || 'us-east-1',
+  });
 };
 
 const SYSTEM_PROMPT = (schemesJson) => `You are Yojna-Setu (योजना-सेतु), a caring and helpful AI assistant that helps rural Indians discover government welfare schemes they are eligible for.
@@ -83,7 +28,7 @@ YOUR TASK:
 2. Ask gentle follow-up questions if you need more information
 3. Match them with relevant schemes from the database above
 4. Explain the benefits clearly in simple language they can understand
-5. Tell them exactly how to apply
+5. Tell them exactly how to apply (documents needed, where to go)
 
 RESPONSE FORMAT (ALWAYS respond with valid JSON):
 {
@@ -131,20 +76,18 @@ export async function POST(request) {
 
     const client = getClient();
 
-    // DEMO MODE: no API key configured
     if (!client) {
-      const lastUserMsg = messages.filter(m => m.role === 'user').at(-1)?.content || '';
-      const demoData = getDemoResponse(lastUserMsg, language || 'hi');
-      demoData.message = `⚡ DEMO MODE (add ANTHROPIC_API_KEY for full AI)\n\n${demoData.message}`;
-      return Response.json({ success: true, data: demoData });
+      return Response.json({
+        error: 'AWS credentials not configured. Add AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to .env.local',
+        setup_instructions: 'Go to AWS Console → IAM → Create user with BedrockFullAccess + PollyAccess policies',
+      }, { status: 503 });
     }
 
-    // LIVE MODE: use Claude AI
     const schemesJson = JSON.stringify(getSchemeSummaryForAI(), null, 2);
     const systemPrompt = SYSTEM_PROMPT(schemesJson);
 
     const response = await client.messages.create({
-      model: 'claude-sonnet-4-6',
+      model: BEDROCK_MODEL,
       max_tokens: 1500,
       system: systemPrompt,
       messages: messages,
@@ -174,8 +117,21 @@ export async function POST(request) {
     return Response.json({ success: true, data: parsed });
   } catch (error) {
     console.error('Chat API error:', error);
+
+    // Helpful error messages for common Bedrock issues
+    const msg = error.message || '';
+    let userFacingError = 'Failed to process request';
+
+    if (msg.includes('AccessDeniedException') || msg.includes('not authorized')) {
+      userFacingError = 'AWS IAM permissions error. Make sure your IAM user has AmazonBedrockFullAccess policy.';
+    } else if (msg.includes('ResourceNotFoundException') || msg.includes('model')) {
+      userFacingError = `Model not available in your region. Try changing AWS_REGION to us-east-1 in .env.local`;
+    } else if (msg.includes('ExpiredTokenException') || msg.includes('InvalidSignature')) {
+      userFacingError = 'AWS credentials invalid or expired. Check your AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.';
+    }
+
     return Response.json({
-      error: 'Failed to process request',
+      error: userFacingError,
       details: error.message,
     }, { status: 500 });
   }
