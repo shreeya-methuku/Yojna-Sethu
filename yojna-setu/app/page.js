@@ -89,31 +89,41 @@ export default function LandingPage() {
   const autoStartHandlerRef = useRef(null);
 
   const fadeInAudio = (audio) => {
-    audio.currentTime = 8;
-    audio.play().catch(() => {});
-    const fadeIn = setInterval(() => {
-      if (audio.volume >= 0.16) { audio.volume = 0.18; clearInterval(fadeIn); }
-      else audio.volume = Math.min(audio.volume + 0.02, 0.18);
-    }, 80);
-    setMusicOn(true);
+    const doFade = () => {
+      const fadeIn = setInterval(() => {
+        if (audio.volume >= 0.16) { audio.volume = 0.18; clearInterval(fadeIn); }
+        else audio.volume = Math.min(audio.volume + 0.02, 0.18);
+      }, 80);
+      setMusicOn(true);
+    };
+    audio.play().then(doFade).catch(() => {});
   };
 
   // Auto-start music on page load
   useEffect(() => {
-    const audio = new Audio('/bg-music.mp3');
+    const audio = new Audio('/api/music');
     audio.loop = true;
     audio.volume = 0;
+    audio.preload = 'auto';
     bgMusicRef.current = audio;
-    audio.currentTime = 8;
+
+    const seekAndPlay = (targetAudio) => {
+      // Seek after canplay so large file doesn't block
+      const trySeek = () => { try { targetAudio.currentTime = 8; } catch (_) {} };
+      if (targetAudio.readyState >= 2) { trySeek(); }
+      else { targetAudio.addEventListener('canplay', trySeek, { once: true }); }
+    };
 
     const unmute = () => {
       audio.muted = false;
+      seekAndPlay(audio);
       fadeInAudio(audio);
       autoStartHandlerRef.current = null;
     };
 
     // Try direct unmuted autoplay first
     audio.play().then(() => {
+      seekAndPlay(audio);
       const fadeIn = setInterval(() => {
         if (audio.volume >= 0.16) { audio.volume = 0.18; clearInterval(fadeIn); }
         else audio.volume = Math.min(audio.volume + 0.02, 0.18);

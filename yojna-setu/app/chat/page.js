@@ -144,7 +144,7 @@ function preprocessForTTS(text) {
     .replace(/\*/g, '')
     .replace(/#+\s*/g, '')
     .replace(/\p{Emoji}/gu, '')
-    .replace(/₹\s*(\d[\d,]*)/g, '$1 rupees')
+    .replace(/₹\s*([\d,]+(?:\.\d+)?(?:\s*(?:lakh|crore|lakhs|crores|लाख|करोड़|ಲಕ್ಷ|ಕೋಟಿ|லட்சம்|கோடி|లక్ష|కోటి))?)/gi, '$1 rupees')
     .replace(/\/year\b/gi, ' per year')
     .replace(/\/month\b/gi, ' per month')
     .replace(/\/day\b/gi, ' per day')
@@ -702,64 +702,14 @@ export default function ChatPage() {
 
             {/* Right: change language + help + reset */}
             <div className="flex items-center gap-2">
-              {/* Language dropdown */}
-              <div className="relative">
-                <motion.button
-                  onClick={() => setShowLangDropdown(v => !v)}
-                  whileTap={{ scale: 0.93 }}
-                  className={`flex items-center gap-1.5 text-sm font-medium px-3 py-2 rounded-xl border transition-all duration-200 ${
-                    showLangDropdown
-                      ? 'text-white border-bharat-green/50 bg-bharat-green/10'
-                      : 'text-gray-300 hover:text-white glass border-bharat-green/25 hover:border-bharat-green/40'
-                  }`}>
-                  <Languages size={13} className="text-bharat-green flex-shrink-0" />
-                  <span>{LANGUAGES.find(l => l.code === language)?.name}</span>
-                  <motion.svg
-                    animate={{ rotate: showLangDropdown ? 180 : 0 }}
-                    transition={{ duration: 0.2 }}
-                    width={10} height={10} viewBox="0 0 10 10" className="text-gray-500 flex-shrink-0">
-                    <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  </motion.svg>
-                </motion.button>
-
-                <AnimatePresence>
-                  {showLangDropdown && (
-                    <>
-                      {/* Click-away overlay */}
-                      <div className="fixed inset-0 z-30" onClick={() => setShowLangDropdown(false)} />
-                      <motion.div
-                        className="absolute right-0 top-full mt-2 z-40 glass-frost border border-white/[0.1] rounded-2xl p-1.5 shadow-float min-w-[160px]"
-                        initial={{ opacity: 0, y: -8, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -6, scale: 0.96 }}
-                        transition={{ type: 'spring', stiffness: 420, damping: 28 }}>
-                        {LANGUAGES.map((lang, i) => (
-                          <motion.button
-                            key={lang.code}
-                            onClick={() => {
-                              setShowLangDropdown(false);
-                              if (lang.code !== language) handleLanguageChange(lang.code);
-                            }}
-                            initial={{ opacity: 0, x: -6 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: i * 0.04 }}
-                            className={`w-full flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl text-sm transition-all duration-150 ${
-                              language === lang.code
-                                ? 'bg-bharat-green/15 text-white border border-bharat-green/30'
-                                : 'text-gray-400 hover:text-white hover:bg-white/[0.06]'
-                            }`}>
-                            <span className="font-semibold">{lang.name}</span>
-                            <span className="text-xs text-gray-600">{lang.greeting}</span>
-                            {language === lang.code && (
-                              <span className="w-1.5 h-1.5 rounded-full bg-bharat-green flex-shrink-0" />
-                            )}
-                          </motion.button>
-                        ))}
-                      </motion.div>
-                    </>
-                  )}
-                </AnimatePresence>
-              </div>
+              {/* Language picker button */}
+              <motion.button
+                onClick={() => setShowLangPicker(true)}
+                whileTap={{ scale: 0.93 }}
+                className="flex items-center gap-1.5 text-sm font-medium px-3 py-2 rounded-xl border transition-all duration-200 text-gray-300 hover:text-white glass border-bharat-green/25 hover:border-bharat-green/40">
+                <Languages size={13} className="text-bharat-green flex-shrink-0" />
+                <span>{LANGUAGES.find(l => l.code === language)?.name}</span>
+              </motion.button>
 
               <motion.button onClick={() => setShowHelp(v => !v)} whileTap={{ scale: 0.93 }}
                 className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-bharat-green glass border border-white/[0.07] px-3 py-2 rounded-xl transition-colors font-medium">
@@ -883,7 +833,7 @@ export default function ChatPage() {
           </div>
 
           {/* Right: Help + Schemes panel (desktop only, lg+) */}
-          <div className="hidden lg:flex w-80 xl:w-96 flex-col flex-shrink-0">
+          <div className="hidden md:flex w-72 lg:w-80 xl:w-96 flex-col flex-shrink-0">
             <SchemesPanel
               schemes={matchedSchemes}
               language={language}
