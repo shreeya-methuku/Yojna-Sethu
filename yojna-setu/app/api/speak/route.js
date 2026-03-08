@@ -59,12 +59,12 @@ export async function POST(request) {
   }
 
   // ── AWS Polly for Hindi (and English fallback if Google TTS failed) ─────────
-  const hasAWSConfig = process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY && process.env.AWS_REGION;
+  const hasAWSConfig = process.env.YOJNA_AWS_KEY && process.env.YOJNA_AWS_SECRET && process.env.YOJNA_AWS_REGION;
   if (hasAWSConfig && VOICE_MAP[language]) {
     try {
       const pollyClient = new PollyClient({
-        region: process.env.AWS_REGION || 'ap-south-1',
-        credentials: { accessKeyId: process.env.AWS_ACCESS_KEY_ID, secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY },
+        region: process.env.YOJNA_AWS_REGION || 'ap-south-1',
+        credentials: { accessKeyId: process.env.YOJNA_AWS_KEY, secretAccessKey: process.env.YOJNA_AWS_SECRET },
       });
       const voice = VOICE_MAP[language];
       const command = new SynthesizeSpeechCommand({

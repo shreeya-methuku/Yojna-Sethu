@@ -28,11 +28,11 @@ const TRANSCRIBE_LANG_MAP = {
 };
 
 const getClients = () => {
-  if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY) return null;
-  const region = process.env.AWS_REGION || 'us-east-1';
+  if (!process.env.YOJNA_AWS_KEY || !process.env.YOJNA_AWS_SECRET) return null;
+  const region = process.env.YOJNA_AWS_REGION || 'us-east-1';
   const credentials = {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    accessKeyId: process.env.YOJNA_AWS_KEY,
+    secretAccessKey: process.env.YOJNA_AWS_SECRET,
   };
   return {
     transcribe: new TranscribeClient({ region, credentials }),

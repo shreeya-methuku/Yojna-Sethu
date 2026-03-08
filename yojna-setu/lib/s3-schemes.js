@@ -20,12 +20,12 @@ let cacheTime = 0;
 const S3_CACHE_TTL_MS = 30 * 60 * 1000; // 30 minutes
 
 function getS3Client() {
-  if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY) return null;
+  if (!process.env.YOJNA_AWS_KEY || !process.env.YOJNA_AWS_SECRET) return null;
   return new S3Client({
-    region: process.env.AWS_REGION || 'us-east-1',
+    region: process.env.YOJNA_AWS_REGION || 'us-east-1',
     credentials: {
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      accessKeyId: process.env.YOJNA_AWS_KEY,
+      secretAccessKey: process.env.YOJNA_AWS_SECRET,
     },
   });
 }

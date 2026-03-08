@@ -23,12 +23,12 @@ const SESSION_TTL_SECONDS = 24 * 60 * 60; // 24 hours
 const memoryStore = new Map();
 
 function getDynamoClient() {
-  if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY) return null;
+  if (!process.env.YOJNA_AWS_KEY || !process.env.YOJNA_AWS_SECRET) return null;
   const client = new DynamoDBClient({
-    region: process.env.AWS_REGION || 'ap-south-1',
+    region: process.env.YOJNA_AWS_REGION || 'ap-south-1',
     credentials: {
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      accessKeyId: process.env.YOJNA_AWS_KEY,
+      secretAccessKey: process.env.YOJNA_AWS_SECRET,
     },
   });
   return DynamoDBDocumentClient.from(client);

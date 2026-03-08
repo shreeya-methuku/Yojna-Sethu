@@ -44,14 +44,14 @@ FALLBACK_RESPONSES.te = { ...FALLBACK_RESPONSES.hi, detected_language: 'te',
   message: 'నమస్కారం! 🙏 సేవ తాత్కాలికంగా అందుబాటులో లేదు. ఈ పథకాలను చూడండి:\n\n• **PM-KISAN** — రైతులకు ₹6,000/సంవత్సరం.\n• **Ayushman Bharat** — BPL కుటుంబాలకు ₹5 లక్షల ఆరోగ్య బీమా.\n• **MGNREGA** — 100 రోజుల గ్రామీణ ఉపాధి.\n\nఇంటర్నెట్ తనిఖీ చేసి మళ్ళీ ప్రయత్నించండి.' };
 
 const getClient = () => {
-  if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY) {
+  if (!process.env.YOJNA_AWS_KEY || !process.env.YOJNA_AWS_SECRET) {
     return null;
   }
   return new BedrockRuntimeClient({
-    region: process.env.AWS_REGION || 'us-east-1',
+    region: process.env.YOJNA_AWS_REGION || 'us-east-1',
     credentials: {
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      accessKeyId: process.env.YOJNA_AWS_KEY,
+      secretAccessKey: process.env.YOJNA_AWS_SECRET,
     },
   });
 };
